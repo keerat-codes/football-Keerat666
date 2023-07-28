@@ -6,6 +6,8 @@ const PORT = 8009;
 
 require('dotenv').config();
 
+const playerNamesRoute = require('./routes/playerNames');
+app.use('/playerNames', playerNamesRoute);
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
