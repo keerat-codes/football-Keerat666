@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const playerNamesRoute = require('./routes/playerNames');
+const zlatan  = require('./controllers/zlatan');
+app.use('/zlatan', zlatan);
 app.use('/playerNames', playerNamesRoute);
 app.use(cors())
 app.use(express.json());
